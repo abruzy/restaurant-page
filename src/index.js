@@ -1,4 +1,6 @@
 import createHomeDisplay from './createHomeDisplay';
+import createRecipeDisplay from './createRecipeDisplay';
+import createContactDisplay from './createContactDisplay';
 
 // nodes
 
@@ -23,6 +25,16 @@ const selectedNav = clickedButton => {
 homeBtn.addEventListener('click', () => {
   selectedNav(this);
   createHomeDisplay();
+});
+
+recipeBtn.addEventListener('click', () => {
+  selectedNav(this);
+  createRecipeDisplay();
+});
+
+contactBtn.addEventListener('click', () => {
+  selectedNav(this);
+  createContactDisplay();
 });
 
 createHomeDisplay();
