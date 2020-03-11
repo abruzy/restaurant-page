@@ -62,6 +62,45 @@ nav li {
 nav li a {
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+  transition: all .4s ease-in-out;
+}
+
+nav li .line {
+  margin-top: 3px;
+  width: 85px;
+  height: 3px;
+  background-color: #fff;
+  transition: all .4s ease-in-out;
+}
+
+nav li a:nth-child(2):hover ~ .line {
+  transform: translate(95px);
+  transition: all .4s ease-in-out;
+  background-color: tomato;
+}
+
+nav li a:nth-child(2):hover {
+  color: tomato;
+}
+
+nav li a:nth-child(3):hover ~ .line {
+  transform: translate(193px);
+  transition: all .4s ease-in-out;
+  background-color: yellow;
+}
+
+nav li a:nth-child(3):hover {
+  color: yellow;
+}
+
+nav li a:nth-child(4):hover ~ .line {
+  transform: translate(288px);
+  transition: all .4s ease-in-out;
+  background-color: skyblue;
+}
+
+nav li a:nth-child(4):hover {
+  color: skyblue;
 }
 
 nav button {
