@@ -1,5 +1,6 @@
 import createHomeDisplay from './createHomeDisplay';
 import createRecipeDisplay from './createRecipeDisplay';
+import createAboutDisplay from './createAboutDisplay';
 import createContactDisplay from './createContactDisplay';
 
 // nodes
@@ -10,30 +11,28 @@ const recipeBtn = document.getElementById('recipe');
 const aboutBtn = document.getElementById('about');
 const contactBtn = document.getElementById('contact');
 
-const selectedNav = clickedButton => {
-  navBtns.forEach((btn) => {
-    if (btn === clickedButton) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+navBtns.forEach(button => {
+  button.addEventListener('click', () => {
+    navBtns.forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
   });
-};
+});
 
 // event handlers
 
 homeBtn.addEventListener('click', () => {
-  selectedNav(this);
   createHomeDisplay();
 });
 
 recipeBtn.addEventListener('click', () => {
-  selectedNav(this);
   createRecipeDisplay();
 });
 
+aboutBtn.addEventListener('click', () => {
+  createAboutDisplay();
+});
+
 contactBtn.addEventListener('click', () => {
-  selectedNav(this);
   createContactDisplay();
 });
 
