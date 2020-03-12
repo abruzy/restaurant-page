@@ -12,7 +12,7 @@ const aboutBtn = document.getElementById('about');
 const contactBtn = document.getElementById('contact');
 
 navBtns.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', function clickedButton() {
     navBtns.forEach(btn => btn.classList.remove('active'));
     this.classList.add('active');
   });
