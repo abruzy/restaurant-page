@@ -65,6 +65,7 @@ nav li a {
   padding: 0.5rem 2rem;
   font-size: 1.2rem;
   transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
 
 .active,
@@ -73,7 +74,7 @@ nav li a:hover {
   transition: all 0.4s ease-in-out;
 }
 
-nav button {
+nav button.book-meal {
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-size: 0.85rem;
@@ -158,12 +159,12 @@ section button {
 
 .menu-img-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    url(../img/bg.jpeg);
+    url(../img/bg1.jpeg);
 }
 
 .menu-img-2 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    url(../img/bg1.jpeg);
+    url(../img/bg.jpeg);
 }
 
 .menu-img-3 {
@@ -173,7 +174,7 @@ section button {
 
 .menu-img-4 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
-    url(../img/chef.png);
+    url(../img/bg1.jpeg);
 }
 
 .menu-info {

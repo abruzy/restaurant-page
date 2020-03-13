@@ -1,7 +1,13 @@
+import createNavDisplay from './createNavDisplay';
 import createHomeDisplay from './createHomeDisplay';
 import createRecipeDisplay from './createRecipeDisplay';
 import createAboutDisplay from './createAboutDisplay';
 import createContactDisplay from './createContactDisplay';
+
+const container = document.querySelector('#content');
+
+container.appendChild(createNavDisplay());
+container.appendChild(createHomeDisplay());
 
 // nodes
 
@@ -25,15 +31,19 @@ homeBtn.addEventListener('click', () => {
 });
 
 recipeBtn.addEventListener('click', () => {
-  createRecipeDisplay();
+  container.innerHTML = '';
+  container.appendChild(createNavDisplay());
+  container.appendChild(createRecipeDisplay());
 });
 
 aboutBtn.addEventListener('click', () => {
-  createAboutDisplay();
+  container.innerHTML = '';
+  container.appendChild(createNavDisplay());
+  container.appendChild(createAboutDisplay());
 });
 
 contactBtn.addEventListener('click', () => {
-  createContactDisplay();
+  container.innerHTML = '';
+  container.appendChild(createNavDisplay());
+  container.appendChild(createContactDisplay());
 });
-
-createHomeDisplay();

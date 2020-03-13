@@ -1,5 +1,3 @@
-const contactContainer = document.querySelector('#content');
-
 const createTableData = (data) => {
   const tableData = document.createElement('td');
   tableData.innerHTML = data;
@@ -40,13 +38,14 @@ const createTitle = (text) => {
 };
 
 const createContactDisplay = () => {
+  const contactContainer = document.createElement('div');
   const title = createTitle('CONTACT US');
   const infoTable = createTable();
 
   contactContainer.classList.add('backdrop');
-  contactContainer.innerHTML = '';
   contactContainer.appendChild(title);
   contactContainer.appendChild(infoTable);
+  return contactContainer;
 };
 
 export default createContactDisplay;

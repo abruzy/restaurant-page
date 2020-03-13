@@ -1,22 +1,41 @@
-const menuContainer = document.getElementById('content');
-
-const recipeContainer = document.createElement('div');
-recipeContainer.setAttribute('class', 'recipe-container');
 const unorderList = document.createElement('ul');
 unorderList.setAttribute('class', 'menu-grid');
 
-recipeContainer.appendChild(unorderList);
-const list = document.createElement('li');
-unorderList.appendChild(list);
+const list1 = document.createElement('li');
+unorderList.appendChild(list1);
+const menuBox1 = document.createElement('div');
+menuBox1.setAttribute('class', 'menu-box menu-img-1');
+list1.appendChild(menuBox1);
+const menuInfo1 = document.createElement('div');
+menuInfo1.setAttribute('class', 'menu-info');
+menuBox1.appendChild(menuInfo1);
 
-const menuBox = document.createElement('div');
-menuBox.setAttribute('class', 'menu-box menu-img-1');
-list.appendChild(menuBox);
+const list2 = document.createElement('li');
+unorderList.appendChild(list2);
+const menuBox2 = document.createElement('div');
+menuBox2.setAttribute('class', 'menu-box menu-img-2');
+list2.appendChild(menuBox2);
+const menuInfo2 = document.createElement('div');
+menuInfo2.setAttribute('class', 'menu-info');
+menuBox2.appendChild(menuInfo2);
 
-const menuInfo = document.createElement('div');
-menuInfo.setAttribute('class', 'menu-info');
-menuBox.appendChild(menuInfo);
+const list3 = document.createElement('li');
+unorderList.appendChild(list3);
+const menuBox3 = document.createElement('div');
+menuBox3.setAttribute('class', 'menu-box menu-img-3');
+list3.appendChild(menuBox3);
+const menuInfo3 = document.createElement('div');
+menuInfo3.setAttribute('class', 'menu-info');
+menuBox3.appendChild(menuInfo3);
 
+const list4 = document.createElement('li');
+unorderList.appendChild(list4);
+const menuBox4 = document.createElement('div');
+menuBox4.setAttribute('class', 'menu-box menu-img-4');
+list4.appendChild(menuBox4);
+const menuInfo4 = document.createElement('div');
+menuInfo4.setAttribute('class', 'menu-info');
+menuBox4.appendChild(menuInfo4);
 
 const createRecipeTitle = text => {
   const title = document.createElement('h3');
@@ -31,14 +50,34 @@ const createdRecipeDesc = text => {
 };
 
 const createRecipeDisplay = () => {
-  const title = createRecipeTitle('Sharwama');
-  const desc = createdRecipeDesc('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a possimus doloribus ex deserunt necessitatibus optio voluptatibus, autem debitis iusto praesentium.');
+  const recipeContainer = document.createElement('div');
+  recipeContainer.setAttribute('class', 'recipe-container');
+  recipeContainer.appendChild(unorderList);
+  const title1 = createRecipeTitle('Sharwama');
+  const desc1 = createdRecipeDesc('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a possimus doloribus ex deserunt necessitatibus optio voluptatibus, autem debitis iusto praesentium.');
 
-  menuInfo.appendChild(title);
-  menuInfo.appendChild(desc);
+  menuInfo1.appendChild(title1);
+  menuInfo1.appendChild(desc1);
 
-  menuContainer.innerHTML = '';
-  menuContainer.appendChild(recipeContainer);
+  const title2 = createRecipeTitle('Pizza');
+  const desc2 = createdRecipeDesc('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a possimus doloribus ex deserunt necessitatibus optio voluptatibus, autem debitis iusto praesentium.');
+
+  menuInfo2.appendChild(title2);
+  menuInfo2.appendChild(desc2);
+
+  const title3 = createRecipeTitle('Beans');
+  const desc3 = createdRecipeDesc('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a possimus doloribus ex deserunt necessitatibus optio voluptatibus, autem debitis iusto praesentium.');
+
+  menuInfo3.appendChild(title3);
+  menuInfo3.appendChild(desc3);
+
+  const title4 = createRecipeTitle('Burger');
+  const desc4 = createdRecipeDesc('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis a possimus doloribus ex deserunt necessitatibus optio voluptatibus, autem debitis iusto praesentium.');
+
+  menuInfo4.appendChild(title4);
+  menuInfo4.appendChild(desc4);
+
+  return recipeContainer;
 };
 
 export default createRecipeDisplay;

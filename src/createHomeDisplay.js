@@ -1,5 +1,3 @@
-const homeContainer = document.getElementById('content');
-
 const createDescription = text => {
   const description = document.createElement('h1');
   description.innerHTML = text;
@@ -29,8 +27,7 @@ const createHomeDisplay = () => {
   container.appendChild(qoute);
   container.appendChild(orderButton);
 
-  homeContainer.innerHTML = '';
-  homeContainer.appendChild(container);
+  return container;
 };
 
 export default createHomeDisplay;
