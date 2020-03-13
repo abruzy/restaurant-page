@@ -1,11 +1,13 @@
 const createDescription = text => {
   const description = document.createElement('h1');
+  description.setAttribute('class', 'home');
   description.innerHTML = text;
   return description;
 };
 
 const createQoute = text => {
   const qoute = document.createElement('p');
+  qoute.setAttribute('class', 'par');
   qoute.innerHTML = text;
   return qoute;
 };
